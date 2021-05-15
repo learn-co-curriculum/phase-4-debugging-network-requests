@@ -13,7 +13,7 @@ Now that we're able to make requests using JavaScript to our Rails server, let's
 focus on some common issues that arise when making network requests, and learn
 techniques to help debug.
 
-To get the backend set up, `cd` into the `dvd-shop-api` folder, and run:
+To get the backend set up, run:
 
 ```sh
 bundle install
@@ -21,11 +21,11 @@ rails db:migrate db:seed
 rails s
 ```
 
-Then, in a new terminal, `cd` into the `dvd-shop` folder and run the frontend:
+Then, in a new terminal, run the frontend:
 
 ```sh
-npm install
-npm start
+npm install --prefix client
+npm start --prefix client
 ```
 
 Confirm both applications are both up and running by visiting
@@ -40,14 +40,15 @@ React application.
 
 To understand the debugging process, let's start building a new feature in our
 app, and let our users create new movies. The RESTful way to build a feature
-like this would be to allow users to make a `POST` request to `/movies`. In our React app, there's some code in place for this request already:
+like this would be to allow users to make a `POST` request to `/movies`. In our
+React app, there's some code in place for this request already:
 
 ```js
-// src/components/MovieForm.js
+// client/src/components/MovieForm.js
 
 function handleSubmit(e) {
   e.preventDefault();
-  fetch("http://localhost:3000/movies", {
+  fetch("/movies", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -83,7 +84,7 @@ The first place we can look is in the developer tools, in the **Console** tab.
 You'll see an error message that looks like this:
 
 ```txt
-POST http://localhost:3000/movies 404 (Not Found)
+POST http://localhost:4000/movies 404 (Not Found)
 ```
 
 As you may have anticipated, since we haven't created this route on the backend
@@ -170,7 +171,7 @@ which means it's an error that occurs when JavaScript is parsing our code.
 It's coming from our `fetch` request as part of the `promise` chain:
 
 ```js
-fetch("http://localhost:3000/movies", {
+fetch("/movies", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
@@ -310,7 +311,7 @@ Submit the form again to initiate another request to this controller action.
 You'll see a new error message in the browser console:
 
 ```txt
-POST http://localhost:3000/movies
+POST http://localhost:4000/movies
   500 (Internal Server Error)
 ```
 

@@ -8,7 +8,7 @@ function MovieList(props) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/movies")
+    fetch("/movies")
       .then((r) => r.json())
       .then((movies) => {
         setMovies(movies);
