@@ -63,7 +63,7 @@ function handleSubmit(e) {
 ```
 
 When the user submits the form, we'll use `fetch` to make a `POST` request to
-`/movies` with all the data form the form in the body of the request.
+`/movies` with all the data from the form in the body of the request.
 
 Try it out now, before adding any code to handle this in the backend!
 
@@ -236,9 +236,10 @@ at the `params` hash:
 "director"=>"", ...>
 ```
 
-You'll see all the key-value pairs from the `formData` object, representing the
-input fields from the form that were sent in the body of the request, are
-present in the params hash. Type `c` and hit enter to exit the `byebug`.
+You'll see that all the key-value pairs from the `formData` object —
+representing the input fields from the form that were sent in the body of the
+request — are present in the params hash. Type `c` and hit enter to exit the
+`byebug`.
 
 We can use that to create a new `Movie`, and send the movie object back as a
 response:
@@ -295,7 +296,7 @@ You can also view the Network tab to see a preview of the response data:
 
 ## Debugging Server Errors
 
-Let's introduce one more error on the server so show another common class
+Let's introduce one more error on the server to show another common class
 of errors we'll need to handle: server-side errors. In the `create` action,
 let's imagine we made a typo (as we all do from time to time):
 
@@ -337,7 +338,7 @@ This gives us a clear place to look for the error. We can see:
 - the error itself: `NameError (uninitialized constant MoviesController::Movi)`,
   indicating that we're using a constant `Movi` incorrectly
 - the file and line number of the error:
-  ` app/controllers/movies_controller.rb:9:in ``create' `
+  ` app/controllers/movies_controller.rb:9:in ```create' `
 
 Now, we know exactly where the error is! Sometimes your errors will be more
 difficult to find, but utilizing the stack trace and the error message will give
@@ -351,12 +352,12 @@ When you see a `404 Not Found` error:
 - Check the Rails Server logs in the backend
 - Add a new route to handle the HTTP Verb + Path for this request
 
-When you see a `Unexpected end of JSON input` error:
+When you see an `Unexpected end of JSON input` error:
 
 - Check your `fetch` request
 - Check the controller action, and make sure to `render json:`
 
-When you need see data from the request in your controller:
+When you need to see data from the request in your controller:
 
 - Add a `byebug` to your controller method
 - Make a request from the browser
