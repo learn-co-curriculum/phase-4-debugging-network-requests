@@ -97,13 +97,13 @@ problems is in the **Network** tab. Open the Network tab, and click the Add
 Movie button to submit the form again. You'll see a new request in the Network
 tab. Click the request to view more details:
 
-![network 404 request headers](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-debugging-network-requests/master/network-404-headers.png)
+![network 404 request headers](https://curriculum-content.s3.amazonaws.com/phase-4/phase-4-debugging-network-requests/network-404-headers.png)
 
 Here we can see the 404 status code, as well as some additional information
 about the request. Clicking the Preview tab will give more details about the
 response the server sent back:
 
-![network 404 response preview](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-debugging-network-requests/master/network-404-preview.png)
+![network 404 response preview](https://curriculum-content.s3.amazonaws.com/phase-4/phase-4-debugging-network-requests/network-404-preview.png)
 
 Since our Rails server is running in Development mode, we can see some
 additional useful information here, such as the exception message that was
@@ -151,7 +151,7 @@ Now, let's try and make the same request from our frontend by submitting the
 form again. Our request still isn't working, but now we're no longer getting
 that routing error. Instead, our Network tab shows a successful request:
 
-![network 204 no content](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-debugging-network-requests/master/network-204-headers.png)
+![network 204 no content](https://curriculum-content.s3.amazonaws.com/phase-4/phase-4-debugging-network-requests/network-204-headers.png)
 
 But our Console tab tells a different story:
 
@@ -292,7 +292,7 @@ Completed 201 Created in 9ms (Views: 0.3ms | ActiveRecord: 4.1ms | Allocations: 
 
 You can also view the Network tab to see a preview of the response data:
 
-![network 201 created preview](https://raw.githubusercontent.com/learn-co-curriculum/phase-4-debugging-network-requests/master/network-201-preview.png)
+![network 201 created preview](https://curriculum-content.s3.amazonaws.com/phase-4/phase-4-debugging-network-requests/network-201-preview.png)
 
 ## Debugging Server Errors
 
