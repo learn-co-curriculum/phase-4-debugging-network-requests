@@ -15,17 +15,17 @@ techniques to help debug.
 
 To get the backend set up, run:
 
-```sh
-bundle install
-rails db:migrate db:seed
-rails s
+```console
+$ bundle install
+$ rails db:migrate db:seed
+$ rails s
 ```
 
 Then, in a new terminal, run the frontend:
 
 ```sh
-npm install --prefix client
-npm start --prefix client
+$ npm install --prefix client
+$ npm start --prefix client
 ```
 
 Confirm both applications are both up and running by visiting
@@ -338,7 +338,7 @@ This gives us a clear place to look for the error. We can see:
 - the error itself: `NameError (uninitialized constant MoviesController::Movi)`,
   indicating that we're using a constant `Movi` incorrectly
 - the file and line number of the error:
-  ` app/controllers/movies_controller.rb:9:in 'create' `
+  `app/controllers/movies_controller.rb:9:in 'create'`
 
 Now, we know exactly where the error is! Sometimes your errors will be more
 difficult to find, but utilizing the stack trace and the error message will give
