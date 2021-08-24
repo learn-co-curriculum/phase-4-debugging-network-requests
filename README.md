@@ -23,7 +23,7 @@ $ rails s
 
 Then, in a new terminal, run the frontend:
 
-```sh
+```console
 $ npm install --prefix client
 $ npm start --prefix client
 ```
