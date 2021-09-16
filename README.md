@@ -368,3 +368,13 @@ When you see a `500 Internal Server Error` error:
 - Open your Rails server log
 - Look for the last request that came through
 - Find the error message and stack trace to identify where the error originated
+
+## Check For Understanding
+
+Before you move on, make sure you can answer the following questions:
+
+1. In general, where does it make sense to look when debugging client errors
+   (4XX HTTP Status codes)?
+2. In general, where does it make sense to look when debugging server errors
+   (5XX HTTP status codes)?
+3. What causes the `Unexpected end of JSON input` error and how can we fix it?
