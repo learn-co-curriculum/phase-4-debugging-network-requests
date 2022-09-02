@@ -39,7 +39,7 @@ React application.
 ## Frontend Debugging Tools
 
 To understand the debugging process, let's start building a new feature in our
-app to allow our users create new movies. The RESTful way to build a feature
+app allowing users to create new movies. The RESTful way to build a feature
 like this would be to allow users to make a `POST` request to `/movies`. In our
 React app, there's some code in place for this request already:
 
